@@ -1,7 +1,7 @@
 # Election_Analysis
 
 ## Project Overview
-This Election Audit Analysis was performed to help determine the winner of a local congressional election. 
+This Election Audit Analysis was performed to help determine the winner of a local congressional election. Of the counties that participted and the candidates who were in the running, a popular vote winner needed to be determined as well as which county had the highest voter turnout.
 
 #### Resources:
 The election data was provided in an Excel spreadsheet titled election_results.csv, and the election winner, along with additional information, was determined using Python 3.10.1 in Visual Studio Code 1.63.2. 
@@ -20,13 +20,19 @@ The Colorado Board of Elections has asked for the following information to provi
 ## Results
 The analysis of the election shows that:
 - There were 369,711 votes cast in the election.
-- There were 3 counties that participated in the election: Arapahoe, Denver, and Jefferson.
+- There were 3 counties that participated in the election: 
+        1. Arapahoe
+        2. Denver
+        3. Jefferson
 - The county results were as follows:
     - Arapahoe had 24,801 votes cast, which came out to 6.7% of the total votes.
     - Denver had 306,055 votes cast, which came out to 82.8% of the total votes.
     - Jefferson had 38,855 votes cast, which came out to 10.5% of the total votes.
     - From these results, it is clear that Denver had the largest voter turnout of all the counties.
-- The candidates that received votes were: Charles Casper Stockham, Diana DeGette, and Raymond Anthony Doane.
+- The candidates that received votes were: 
+        1. Charles Casper Stockham
+        2. Diana DeGette
+        3. Raymond Anthony Doane.
 - The candidate results were as follows:
     - Charles Casper Stockham received 23.0% of the votes and 85,213 total votes.
     - Diana DeGette received 73.8% of the votes and 272,892 total votes.
