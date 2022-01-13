@@ -21,18 +21,18 @@ The Colorado Board of Elections has asked for the following information to provi
 The analysis of the election shows that:
 - There were 369,711 votes cast in the election.
 - There were 3 counties that participated in the election: 
-        1. Arapahoe
-        2. Denver
-        3. Jefferson
+1. Arapahoe
+2. Denver
+3. Jefferson
 - The county results were as follows:
     - Arapahoe had 24,801 votes cast, which came out to 6.7% of the total votes.
     - Denver had 306,055 votes cast, which came out to 82.8% of the total votes.
     - Jefferson had 38,855 votes cast, which came out to 10.5% of the total votes.
     - From these results, it is clear that Denver had the largest voter turnout of all the counties.
 - The candidates that received votes were: 
-        1. Charles Casper Stockham
-        2. Diana DeGette
-        3. Raymond Anthony Doane.
+1. Charles Casper Stockham
+2. Diana DeGette
+3. Raymond Anthony Doane.
 - The candidate results were as follows:
     - Charles Casper Stockham received 23.0% of the votes and 85,213 total votes.
     - Diana DeGette received 73.8% of the votes and 272,892 total votes.
@@ -45,3 +45,20 @@ The analysis of the election shows that:
 
 
 ## Challenge Summary
+As was detailed above, the code in this election analysis provided the desirable outcomes of this particular election. The current code is catered specifically to the election data that was provided; however, it can certainly be repurposed to work for other elections. With a few updates here and there, an election commission could use this code script for other election results that they are tasked with analyzing.
+
+Once the script is copied to a new visual studio code file, the first step would be to change the data that the script is referencing. As long as the new election results data is in a csv file and saved in the “Resources” folder, the ends of the third and fourth lines of the scrip could be changed at:
+
+`(“Resources”, “election_results.csv”)` & ` (“analysis”, “election_analysis.txt”)`
+And converted to fit a new election like so:
+`(“Resources”, “new_election_results.csv”)` & ` (“analysis”, “new_election_analysis.txt”)`
+
+Once the new election data file is referenced, the code can be changed to fit whatever is contained in that new file. If the columns were labeled a little different, like say the “candidate name” and “county” columns were switched around, it would be good to switch the candidate variable names and the county variable names so that it makes sense what each variable is referencing (which column they are referencing).
+
+Also, the code could be updated to analyze an additional column if this new cvs file had one. Say for example, there is an additional column in the new election data that contains the candidate’s party affiliation. A new list and dictionary could be added to the script like so:
+`party_affiliation = []` and `party_votes = {}`
+Then, the winning party affiliation would need to be initiated to start at a blank slate and the party votes to start at zero as seen below:
+‘winning_party = “”` and `party_vote_count = 0`
+Once that is taken care of, new segments of code can be added to the script right below where the candidate and county code was written. The easiest way would be to copy the code that was created for the candidate information, and just replace the lists, dictionaries, variables, etc. with the ones that were created for the party affiliation (listed above). Although this example was for a potential “party affiliation” column, it could be used for any additional column that might be added on to the data set.
+
+Even if there were a second csv file of data that were for the same election, this script can be applied to output the results of that additional data into the same text file. For example, say there were an election where the commission needed to determine the municipal results as well. If that data were in a separate csv file, the main step would be to save that csv file to the same “Resources” file that the first csv data is in. As long as that is taken care of, that fourth line (that was updated earlier) wouldn’t have to be updated. Leaving it the same would ensure that the results of this municipal election data are displayed in the same “election_analysis.txt” output, in addition to the county results.
