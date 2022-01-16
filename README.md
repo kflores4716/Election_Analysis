@@ -1,12 +1,12 @@
 # Election_Analysis
 
 ## Project Overview
-This Election Audit Analysis was performed to help determine the winner of a local congressional election. Of the counties that participted and the candidates who were in the running, a popular vote winner needed to be determined as well as which county had the highest voter turnout.
+This Election Analysis Audit was performed to help determine the winner of a local congressional election. Of the counties that participted and the candidates who were in the running, a popular vote winner needed to be determined as well as which county had the highest voter turnout.
 
 #### Resources:
-The election data was provided in an Excel spreadsheet titled election_results.csv. The election winner, along with additional information, was determined using Python 3.10.1 in Visual Studio Code 1.63.2. 
+The election data was provided in an Excel spreadsheet titled `election_results.csv`. The election winner, along with additional information, was determined using Python 3.10.1 in Visual Studio Code 1.63.2. 
 
-#### Deliverables:
+#### Desired Outcomes:
 The Colorado Board of Elections has asked for the following information to provide a comprehensive outcome of the election audit:
 
 1. Find the total number of votes that were cast in the election.
@@ -16,6 +16,8 @@ The Colorado Board of Elections has asked for the following information to provi
 5. Find all of the candidates that received votes in the election.
 6. Calculcate the total number of votes each candidate received, as well as the percentage of total votes they received.
 7. Determine the winning candidate based on popular vote and provide their vote count and vote percentage.
+
+The election analysis audit referenced the data from the `election_results.csv` file. It was written to provide a comprehensive print-out of the desired outcomes listed above. 
 
 ## Results
 The analysis of the election shows that:
