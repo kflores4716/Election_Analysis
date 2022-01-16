@@ -4,7 +4,7 @@
 This Election Audit Analysis was performed to help determine the winner of a local congressional election. Of the counties that participted and the candidates who were in the running, a popular vote winner needed to be determined as well as which county had the highest voter turnout.
 
 #### Resources:
-The election data was provided in an Excel spreadsheet titled election_results.csv, and the election winner, along with additional information, was determined using Python 3.10.1 in Visual Studio Code 1.63.2. 
+The election data was provided in an Excel spreadsheet titled election_results.csv. The election winner, along with additional information, was determined using Python 3.10.1 in Visual Studio Code 1.63.2. 
 
 #### Deliverables:
 The Colorado Board of Elections has asked for the following information to provide a comprehensive outcome of the election audit:
@@ -39,26 +39,44 @@ The analysis of the election shows that:
     - Raymon Anthony Doane received 3.1% of the votes and 11,606 total votes.
 - The winner of the election was:
     - Diana DeGette who receied 73.8% of the votes and 272,892 total votes.
-#### Election Results as seen in the VS Code Python Text File:
+
+#### Election Results Image
+
+##### The image below shows the election results as seen in the VS Code Python text file:
 
 ![VS_Code_txt_image](https://user-images.githubusercontent.com/94764735/148705273-70c9f3d0-a76f-45a2-87f4-b0f90619f612.png)
 
 
 ## Challenge Summary
-As was detailed above, the code in this election analysis provided the desirable outcomes of this particular election. The current code is catered specifically to the election data that was provided; however, it can certainly be repurposed to work for other elections. With a few updates here and there, an election commission could use this code script for other election results that they are tasked with analyzing.
+As was detailed above, the code in this election analysis provided the desired outcomes of this particular election. The current code is catered specifically to the election data that was provided; however, it can certainly be repurposed to work for other elections. With a few updates here and there, an election commission could use this code script for other election results that they are tasked with analyzing.
 
-Once the script is copied to a new visual studio code file, the first step would be to change the data that the script is referencing. As long as the new election results data is in a csv file and saved in the “Resources” folder, the ends of the third and fourth lines of the scrip could be changed at:
+To begin, the script should be copied to a new visual studio code file. Once the script is in a new file, the first step would be to change the data that the script is referencing. As long as the new election results data is in a csv file and saved in the “Resources” folder, the ends of the third and fourth lines of the scrip could be changed at:
 
 `(“Resources”, “election_results.csv”)` & ` (“analysis”, “election_analysis.txt”)`
+
 And converted to fit a new election like so:
+
 `(“Resources”, “new_election_results.csv”)` & ` (“analysis”, “new_election_analysis.txt”)`
 
-Once the new election data file is referenced, the code can be changed to fit whatever is contained in that new file. If the columns were labeled a little different, like say the “candidate name” and “county” columns were switched around, it would be good to switch the candidate variable names and the county variable names so that it makes sense what each variable is referencing (which column they are referencing).
+Once the new election data file is referenced, the code can be changed to fit whatever is contained in that new file. If the columns were labeled a little differently, like say the “candidate name” and “county” columns were switched around, it would be wise to switch the names of the candidate variable and county variable so that it makes sense which column each variable is referencing.
 
-Also, the code could be updated to analyze an additional column if this new cvs file had one. Say for example, there is an additional column in the new election data that contains the candidate’s party affiliation. A new list and dictionary could be added to the script like so:
-`party_affiliation = []` and `party_votes = {}`
-Then, the winning party affiliation would need to be initiated to start at a blank slate and the party votes to start at zero as seen below:
-‘winning_party = “”` and `party_vote_count = 0`
-Once that is taken care of, new segments of code can be added to the script right below where the candidate and county code was written. The easiest way would be to copy the code that was created for the candidate information, and just replace the lists, dictionaries, variables, etc. with the ones that were created for the party affiliation (listed above). Although this example was for a potential “party affiliation” column, it could be used for any additional column that might be added on to the data set.
+Also, the code could be updated to analyze an additional column if this `new_election_results.csv` file had one. Say for example, there is an additional column in the new file that contains the candidate’s party affiliation. A new list and dictionary could be added to the script like so:
 
-Even if there were a second csv file of data that were for the same election, this script can be applied to output the results of that additional data into the same text file. For example, say there were an election where the commission needed to determine the municipal results as well. If that data were in a separate csv file, the main step would be to save that csv file to the same “Resources” file that the first csv data is in. As long as that is taken care of, that fourth line (that was updated earlier) wouldn’t have to be updated. Leaving it the same would ensure that the results of this municipal election data are displayed in the same “election_analysis.txt” output, in addition to the county results.
+`party_affiliation = []`
+
+and 
+
+`party_votes = {}`
+
+Then, the winning party affiliation would need to be initiated to start at a blank slate, and the party votes initiated to start at zero (as seen below):
+
+‘winning_party = ""` 
+
+and 
+
+`party_vote_count = 0`
+
+
+Once that is taken care of, new segments of code can be added to the script right below where the candidate and county code was written. The easiest way to add this new code would be to copy the code created for the candidate information and replace the lists, dictionaries, variables, etc. with the ones that were just created for the party affiliation. Although this example was for an additional “party affiliation” column, it could be used for almost any additional column that might be added on to the data set.
+
+Lastly, even if the second csv file (`new_election_results.csv`) contianed data for the same election, this script can still be applied to output it's results into the same text file. For example, say there were an election where the commission needed to determine the municipal results as well. If that municipal data were in the `new_election_results.csv` file, the main step would be to make sure that the csv file is saved to the same “Resources” folder that the first csv file is in. As long as that is taken care of, that fourth line of code (that was shown how to update earlier) wouldn’t have to be updated. Leaving it the same would ensure that the results of this municipal election data are displayed in the same `election_analysis.txt` output, along with what is already in there.
