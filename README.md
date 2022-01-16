@@ -70,7 +70,7 @@ and
 
 Then, the winning party affiliation would need to be initiated to start at a blank slate, and the party votes initiated to start at zero (as seen below):
 
-‘winning_party = ""` 
+`winning_party = ""` 
 
 and 
 
